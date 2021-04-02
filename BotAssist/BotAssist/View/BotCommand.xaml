@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BotAssist.View.BotCommand"
+             Padding="20">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding Bot}"
+                   FontSize="Caption"
+                   FontAttributes="Bold"
+                   TextTransform="Uppercase"/>
+            <Label Text="{Binding Name}"
+                   FontSize="Large"
+                   FontAttributes="Bold"/>
+            <Label Text="{Binding ShortCommand}"
+                   FontSize="Body"/>
+            <ListView ItemsSource="{Binding Fields}"
+                      SelectionMode="None"
+                      CachingStrategy="RecycleElement">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Entry IsEnabled="False"
+                   IsReadOnly="True"
+                   Text=""/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

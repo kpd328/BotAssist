@@ -10,5 +10,6 @@ namespace BotAssist.Model.Object {
         public string ImageUrl { get; set; }
         public bool Favorite { get; set; }
         public string FavoriteIcon => Favorite ? "ic_favorite_custom_18dp" : "ic_favorite_gray_18dp";
+        public IList<Command> Commands { get; set; }
     }
 }

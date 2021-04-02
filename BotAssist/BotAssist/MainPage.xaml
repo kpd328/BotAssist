@@ -5,6 +5,6 @@
              x:Class="BotAssist.MainPage"
              Padding="20">
     <ContentPage.Content>
-        <v:BotList/>
+        <v:BotList x:Name="MyBotList"/>
     </ContentPage.Content>
 </ContentPage>

@@ -9,7 +9,9 @@
               VerticalOptions="FillAndExpand"
               HorizontalOptions="FillAndExpand"
               RowHeight="150"
-              SeparatorVisibility="None">
+              SeparatorVisibility="None"
+              ItemTapped="MyListView_ItemTapped"
+              SelectionMode="None">
 
         <!--Custom View Cells-->
         <ListView.ItemTemplate>
