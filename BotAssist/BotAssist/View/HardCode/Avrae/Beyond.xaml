@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BotAssist.View.HardCode.Avrae.Beyond"
+             Padding="20"
+             Title="Avrae">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Avrae"
+                   FontSize="Caption"
+                   FontAttributes="Bold"
+                   TextTransform="Uppercase"/>
+            <Label Text="Set Character with D&amp;D Beyond"
+                   FontSize="Large"
+                   FontAttributes="Bold"/>
+            <Label Text="!beyond"
+                   FontSize="Body"/>
+            <Entry Text="{Binding Input}"
+                   Placeholder="D&amp;D Beyond Character URL"/>
+            <Entry IsReadOnly="True"
+                   Text="{Binding Output}"/>
+            <Button Text="Copy"
+                    Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

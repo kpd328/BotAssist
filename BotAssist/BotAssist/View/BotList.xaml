@@ -1,26 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BotAssist.View.BotList"
-             Visual="Material">
+             Visual="Material"
+             Title="Bot Assist">
     <ListView x:Name="MyListView"
-              ItemsSource="{Binding Items}"
+              ItemsSource="{Binding AllItems}"
               CachingStrategy="RecycleElement"
               VerticalOptions="FillAndExpand"
               HorizontalOptions="FillAndExpand"
-              RowHeight="150"
+              HasUnevenRows="True"
               SeparatorVisibility="None"
               ItemTapped="MyListView_ItemTapped"
               SelectionMode="None">
-
-        <!--Custom View Cells-->
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
                     <Frame BorderColor="Black"
                            BackgroundColor="Transparent"
                            Padding="10"
-                           Margin="0,0,0,10"
+                           Margin="10,10,10,0"
                            CornerRadius="5">
                         <Grid VerticalOptions="Fill">
                             <Grid.RowDefinitions>
@@ -68,7 +67,9 @@
                                     Grid.RowSpan="2"
                                     ImageSource="{Binding FavoriteIcon}"
                                     Padding="12"
-                                    BackgroundColor="#00000000"/>
+                                    BackgroundColor="#00000000"
+                                    Clicked="Button_Clicked"
+                                    Command="{Binding FavButton}"/>
 
                             <Label Grid.Row="2"
                                    Grid.Column="0"
@@ -82,4 +83,4 @@
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
-</ContentView>
+</ContentPage>

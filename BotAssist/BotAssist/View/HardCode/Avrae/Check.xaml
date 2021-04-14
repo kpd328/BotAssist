@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BotAssist.View.HardCode.Avrae.Check"
+             Padding="20"
+             Title="Avrae">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Avrae"
+                   FontSize="Caption"
+                   FontAttributes="Bold"
+                   TextTransform="Uppercase"/>
+            <Label Text="Make Check"
+                   FontSize="Large"
+                   FontAttributes="Bold"/>
+            <Label Text="!check"
+                   FontSize="Body"/>
+            <Picker SelectedItem="{Binding Input1}"
+                    Title="Skill">
+                <Picker.Items>
+                    <x:String>Strength</x:String>
+                    <x:String>Dexterity</x:String>
+                    <x:String>Constitution</x:String>
+                    <x:String>Intelligence</x:String>
+                    <x:String>Wisdom</x:String>
+                    <x:String>Charisma</x:String>
+                    <x:String>Acrobatics</x:String>
+                    <x:String>Animal Handling</x:String>
+                    <x:String>Arcana</x:String>
+                    <x:String>Athletics</x:String>
+                    <x:String>Deception</x:String>
+                    <x:String>History</x:String>
+                    <x:String>Insight</x:String>
+                    <x:String>Intimidation</x:String>
+                    <x:String>Investigation</x:String>
+                    <x:String>Medicine</x:String>
+                    <x:String>Nature</x:String>
+                    <x:String>Perception</x:String>
+                    <x:String>Performance</x:String>
+                    <x:String>Persuasion</x:String>
+                    <x:String>Religion</x:String>
+                    <x:String>Sleight of Hand</x:String>
+                    <x:String>Stealth</x:String>
+                    <x:String>Survival</x:String>
+                    <x:String>Initiative</x:String>
+                </Picker.Items>
+            </Picker>
+            <Picker SelectedItem="{Binding Input2}"
+                    Title="Advantage? Disadvantage?">
+                <Picker.Items>
+                    <x:String></x:String>
+                    <x:String>adv</x:String>
+                    <x:String>dis</x:String>
+                </Picker.Items>
+            </Picker>
+            <Entry Text="{Binding Input3}"
+                   Keyboard="Telephone"
+                   Placeholder="Bonus to Roll"/>
+            <Entry Text="{Binding Input4}"
+                   Keyboard="Telephone"
+                   Placeholder="Set Check DC"/>
+            <Entry Text="{Binding Input5}"
+                   Keyboard="Telephone"
+                   Placeholder="Set Minimum Roll"/>
+            <Entry Text="{Binding Input6}"
+                   Keyboard="Telephone"
+                   Placeholder="Number of Checks to Roll"/>
+            <Picker SelectedItem="{Binding Input7}"
+                    Title="Override Check Ability">
+                <Picker.Items>
+                    <x:String></x:String>
+                    <x:String>str</x:String>
+                    <x:String>dex</x:String>
+                    <x:String>con</x:String>
+                    <x:String>int</x:String>
+                    <x:String>wis</x:String>
+                    <x:String>cha</x:String>
+                </Picker.Items>
+            </Picker>
+            <Entry IsReadOnly="True"
+                   Text="{Binding Output}"/>
+            <Button Text="Copy"
+                    Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

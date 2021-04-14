@@ -1,17 +1,20 @@
 ﻿using BotAssist.Model.Object;
 using BotAssist.View;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BotAssist.ViewModel;
+using System.Collections.ObjectModel;
 using Xamarin.Forms;
 
 namespace BotAssist {
-    public partial class MainPage : ContentPage {
+    public partial class MainPage : FlyoutPage {
+        public ObservableCollection<Bot> Items { get; set; }
+
         public MainPage() {
             InitializeComponent();
+
+            var BotListVM = new BotListViewmodel();
+
+            Flyout = new Favorites(BotListVM);
+            Detail = new NavigationPage(new BotList(BotListVM));
         }
     }
 }
